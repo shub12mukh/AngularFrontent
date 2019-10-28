@@ -1,0 +1,34 @@
+<div class="col-md-6">
+    
+    
+    <nav class ="navbar navbar-expand-md navbar-dark bg-dark">
+                <ul class="navbar-nav">
+                    <li style="margin-right:70px;"><a routerLink="/employeeAll" class="nav-link">View All Employees</a></li>
+                    <li style="margin-right:100px;"><a routerLink="/employeeArchitect" class="nav-link">Architect</a></li>
+                    <li style="margin-right:30px;"><a routerLink="/employeeDeveloper" class="nav-link">Developer</a></li>
+                </ul>
+    </nav>
+  
+
+
+    <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>User name</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.username}}</td>
+            <td>{{employee.firstname}}</td>
+            <td>{{employee.lastname}}</td>
+            <td>{{employee.description}}</td>
+            <td><button class="btn btn-danger"> Delete Employee</button></td>
+        </tr>
+    </tbody>
+    </table>
+
+  </div>
