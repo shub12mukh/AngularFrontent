@@ -4,6 +4,7 @@ import {UserallComponent} from './userall/userall.component';
 import {UserarchitectComponent} from './userarchitect/userarchitect.component';
 import {Routes,RouterModule} from '@angular/router';
 import { UserComponent } from './user/user.component';
+import {AuthguardService } from '../service/authguard.service';
 const routes : Routes = [
   {
     path : "user",
@@ -11,11 +12,13 @@ const routes : Routes = [
     children : [
       {
         path : "userall",
-        component : UserallComponent
+        component : UserallComponent,
+        canActivate: [AuthguardService]
       },
       {
         path : "userarchitect",
-        component : UserarchitectComponent
+        component : UserarchitectComponent,
+        canActivate: [AuthguardService]
       }
     ]
   }

@@ -8,11 +8,9 @@
     <header>
         <nav class ="navbar navbar-expand-md navbar-dark bg-dark" style="width: 80%;">
             <div><a  class="navbar-brand"><p style="color:bisque">User List Project</p></a></div>
-            
             <ul class="navbar-nav">
-                <li style="margin-right: 50px;"><a *ngIf="loginService.isUserLoggedIn()" routerLink="/user" class="nav-link">View Users</a></li>
-                <li style="margin-right: 50px;"><a *ngIf="loginService.isUserLoggedIn()" class="nav-link">Add New Employee</a></li>
-                
+                <li style="margin-right: 50px;"><a *ngIf="loginService.isUserLoggedIn()" routerLink="user" class="nav-link">View Users</a></li>
+                <li style="margin-right: 50px;"><a *ngIf="loginService.isUserLoggedIn()" routerLink="./addnewemployee" class="nav-link">Add New Employee</a></li>
                 <li style="margin-right: 50px;"><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
                 <li style="margin-right: 50px;"><a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link">LogOut</a></li>
             </ul>

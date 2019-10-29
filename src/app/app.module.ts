@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { EmployeeComponent } from './employee/employee.component';
 import { UserModule } from './user/user.module';
 import { MapsComponent } from './maps/maps.component';
+import { AddnewemployeeComponent } from './addnewemployee/addnewemployee.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MapsComponent } from './maps/maps.component';
     LoginComponent,
     LogoutComponent,
     EmployeeComponent,
-    MapsComponent
+    MapsComponent,
+    AddnewemployeeComponent
   ],
   imports: [
     BrowserModule,

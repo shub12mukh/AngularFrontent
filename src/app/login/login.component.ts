@@ -26,4 +26,13 @@ export class LoginComponent implements OnInit {
       this.invalidLogin = true
     }
   }
+
+  userLogin(){
+    console.log(this.username+''+this.password);
+    this.authentication.attemptAuth(this.username,this.password).subscribe(
+      data =>{
+        console.log(data);
+      }
+    );
+  }
 }

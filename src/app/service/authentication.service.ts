@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import {HttpclientService} from './httpclient.service';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
-  constructor() { }
+  constructor(private httpclientservice :HttpclientService) { }
   private username= "shub12";
   private password= "abcd1234";
 
@@ -25,6 +26,10 @@ export class AuthenticationService {
 
   userLogOut(){
     localStorage.removeItem('username');
+  }
+
+  attemptAuth(username:String,password:String){
+    return this.httpclientservice.getValidToken(username,password);
   }
 
 
