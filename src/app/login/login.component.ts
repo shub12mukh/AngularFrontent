@@ -31,8 +31,13 @@ export class LoginComponent implements OnInit {
     console.log(this.username+''+this.password);
     this.authentication.attemptAuth(this.username,this.password).subscribe(
       data =>{
-        console.log(data);
+        this.saveTokenToLocalStorage(data);
       }
     );
+  }
+
+  saveTokenToLocalStorage(token:any){
+    const tokenn = token;
+    this.authentication.saveTokenToLocalStorage(tokenn);
   }
 }

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from  '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from  '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,7 +13,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { UserModule } from './user/user.module';
 import { MapsComponent } from './maps/maps.component';
 import { AddnewemployeeComponent } from './addnewemployee/addnewemployee.component';
-
+import { TokenInterceptorService } from './token-interceptor.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +33,11 @@ import { AddnewemployeeComponent } from './addnewemployee/addnewemployee.compone
     FormsModule,
     UserModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass : TokenInterceptorService,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
