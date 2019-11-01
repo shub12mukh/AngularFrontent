@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
     this.authentication.attemptAuth(this.username,this.password).subscribe(
       data =>{
         this.saveTokenToLocalStorage(data);
+        this.route.navigate(['user']);
       }
     );
   }

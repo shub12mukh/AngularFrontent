@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <h1>Sign Up</h1>
+    </div>
+
+    <!-- Login Form -->
+    <form>
+      <input type="text" id="login" class="fadeIn second" name="login" [(ngModel)]="firstname" placeholder="First Name">
+      <input type="text" id="login" class="fadeIn second" name="login" [(ngModel)]="lastname" placeholder="Last Name">
+      <input type="text" id="password" class="fadeIn third" name="login" [(ngModel)]="email" placeholder="Email Id">
+      <input type="password" id="password" class="fadeIn third" name="login" [(ngModel)]="password1" placeholder="Password">
+      <input type="password" id="password" class="fadeIn third" name="login" [(ngModel)]="password2" placeholder="Confirm Password">
+      <input type="submit" (click)=userSignUp() class="fadeIn fourth" value="Sign Up">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a routerLink='/login'>Take me to Log in</a>
+    </div>
+
+  </div>
+</div>

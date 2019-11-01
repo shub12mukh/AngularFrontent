@@ -14,6 +14,7 @@ import { UserModule } from './user/user.module';
 import { MapsComponent } from './maps/maps.component';
 import { AddnewemployeeComponent } from './addnewemployee/addnewemployee.component';
 import { TokenInterceptorService } from './token-interceptor.service';
+import { SignupComponent } from './signup/signup.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { TokenInterceptorService } from './token-interceptor.service';
     LogoutComponent,
     EmployeeComponent,
     MapsComponent,
-    AddnewemployeeComponent
+    AddnewemployeeComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

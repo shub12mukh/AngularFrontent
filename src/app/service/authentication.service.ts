@@ -21,7 +21,7 @@ export class AuthenticationService {
   }
 
   isUserLoggedIn() {
-    let user = localStorage.getItem('username')
+    let user = localStorage.getItem('token');
     return !(user === null)
   }
 

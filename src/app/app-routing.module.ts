@@ -8,6 +8,7 @@ import { AuthenticationService } from './service/authentication.service';
 import {AuthguardService } from './service/authguard.service';
 import {UserComponent} from './user/user/user.component';
 import {AddnewemployeeComponent} from './addnewemployee/addnewemployee.component';
+import {SignupComponent} from './signup/signup.component';
 const routes: Routes = [
 
   { path : 'home' , component : HomeComponent , canActivate: [AuthguardService]},
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path : 'addnewemployee' , component : AddnewemployeeComponent, canActivate:[AuthguardService]},
   { path : 'logout' , component : LogoutComponent , canActivate: [AuthguardService]},
   { path : '' , redirectTo: 'user', pathMatch: 'full'},
+  { path : 'signup' , component : SignupComponent},
   { path : 'user' , component : UserComponent , canActivate: [AuthguardService]}
 ];
 
